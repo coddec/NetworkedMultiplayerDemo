@@ -1,7 +1,7 @@
 ---
 
 title: Guide to create a simple multiplayer networked game with SplashKit
-date: 2018-05-13 16:25 UTC
+date: 2018-05-16 20:59 UTC
 tags: graphics,window,network
 author: Coddec
 author_url: https://github.com/coddec/
@@ -37,7 +37,7 @@ variety of objects in C#.
 
 ---
 ## Table of Contents
-- ***[0. Pre-Guide](#0pre-guide)***
+- ***[0. Pre-Guide](#0-pre-guide)***
 	- [0.1 Background](#01-background)
 	- [0.2 Class Diagram](#02-class-diagram)
 - ***[1. Player.cs](#1-playercs)***
