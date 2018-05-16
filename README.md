@@ -57,13 +57,6 @@ variety of objects in C#.
 	- [4.2 Create class constructor](#42-create-class-constructor)
 	- [4.3 Create the rest of the class](#43-create-the-rest-of-the-class)
 - ***[5. Program.cs](#5-programcs)***
-- ***[6. Game.cs](#6-gamecs)***
-	- [6.1 Define required variables, fields and properties.](#61-define-required-variables-fields-and-properties)
-	- [6.2 Create class constructor](#62-create-class-constructor)
-	- [6.3 Create the rest of the class](#63-create-the-rest-of-the-class)
-	- [6.4 Complete code](#64-complete-code)
-- ***[7. Player.cs](#7-playercs)***
-	- [7.1 Complete code](#71-complete-code)
 ---
 
 
