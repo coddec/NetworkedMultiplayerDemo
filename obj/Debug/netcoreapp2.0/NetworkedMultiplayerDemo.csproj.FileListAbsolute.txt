@@ -1,0 +1,11 @@
+L:\NMD\NetworkedMultiplayerDemo\obj\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.csprojAssemblyReference.cache
+L:\NMD\NetworkedMultiplayerDemo\obj\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.csproj.CoreCompileInputs.cache
+L:\NMD\NetworkedMultiplayerDemo\obj\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.AssemblyInfoInputs.cache
+L:\NMD\NetworkedMultiplayerDemo\obj\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.AssemblyInfo.cs
+L:\NMD\NetworkedMultiplayerDemo\bin\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.deps.json
+L:\NMD\NetworkedMultiplayerDemo\bin\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.runtimeconfig.json
+L:\NMD\NetworkedMultiplayerDemo\bin\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.runtimeconfig.dev.json
+L:\NMD\NetworkedMultiplayerDemo\bin\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.dll
+L:\NMD\NetworkedMultiplayerDemo\bin\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.pdb
+L:\NMD\NetworkedMultiplayerDemo\obj\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.dll
+L:\NMD\NetworkedMultiplayerDemo\obj\Debug\netcoreapp2.0\NetworkedMultiplayerDemo.pdb
