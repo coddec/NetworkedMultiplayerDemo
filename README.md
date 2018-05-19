@@ -104,25 +104,25 @@ public double Radius { get; set; } = 10;
 ##### 1.2 Create class constructor
 - The player need to know where to draw itself and its name, so we should pass `Window gameWidow` and `string name` in constructor.
 - Within the constructor, we assign X and Y points for player to draw on, and its name and color.
- - We want to put player object in the center of the gamewindow by using `X = gameWindow.Width / 2;` to make the player appear at the center horizontally.
- - Set Y equal to half of the height of the gamewindow, now the player shoule be draw at the center of the gamewindow intially, when game started.
- - Set the Name property to equal passed in name variable
- - We assign a random color to player's color property by using `PlayerColor = SplashKit.RandomRGBColor(200);`
+	- We want to put player object in the center of the gamewindow by using `X = gameWindow.Width / 2;` to make the player appear at the center horizontally.
+	- Set Y equal to half of the height of the gamewindow, now the player shoule be draw at the center of the gamewindow intially, when game started.
+	- Set the Name property to equal passed in name variable
+	- We assign a random color to player's color property by using `PlayerColor = SplashKit.RandomRGBColor(200);`
 
 
 ##### 1.3 Create the rest of the class
 - The player will have a `Draw()` method, so that it can draw it self when called
 - This method will draw the player as a filled circle, a circle for collision detection and its name.
 - It will include:
- - Draw a solid circle with passed in PlayerColor, X, Y and Radius parameter `SplashKit.FillCircle(PlayerColor, X, Y, Radius);`
- - Draw a invisible circle around the solid circle for collision detection purpose `c = SplashKit.CircleAt(X, Y, Radius);`
- - Finally we need to draw the player's name on top of it `SplashKit.DrawText(Name, Color.Black, X - Radius, Y - Radius - 10);`
- - These will make up our Draw() method for player class
+	- Draw a solid circle with passed in PlayerColor, X, Y and Radius parameter `SplashKit.FillCircle(PlayerColor, X, Y, Radius);`
+	- Draw a invisible circle around the solid circle for collision detection purpose `c = SplashKit.CircleAt(X, Y, Radius);`
+	- Finally we need to draw the player's name on top of it `SplashKit.DrawText(Name, Color.Black, X - Radius, Y - Radius - 10);`
+	- These will make up our Draw() method for player class
 
 - The player will have a HandleInput method, so that it can respond to keyboard stroke, in this game the player object can bed moved around by changing its X and Y, and exit the game by pressing ESC key.
 - To achieve it we need to create a couple of if statements.
- - When user pressed ESC key, we will set Quit property to true, by using `SplashKit.KeyDown(SplashKitSDK.KeyCode.EscapeKey)` with if statements we will be able to achieve this.
- - With similar structure, we can move the player to desired direction with keys we like e.g. WSAD to change its X and Y with out defined Speed variable.
+	- When user pressed ESC key, we will set Quit property to true, by using `SplashKit.KeyDown(SplashKitSDK.KeyCode.EscapeKey)` with if statements we will be able to achieve this.
+	- With similar structure, we can move the player to desired direction with keys we like e.g. WSAD to change its X and Y with out defined Speed variable.
 
 - The player will return true if it collided with other player, in order to know which otherplayer it collided with, we need to pass in otherplayer to this method.
 
@@ -155,8 +155,8 @@ public double Radius { get; set; } = 10;
 
 ##### 2.2 Create class constructor
 - In order to draw OtherPlayer on the screen later, we need to pass in ` string name`, ` double x`, `double y`, `double radius` in the constructor to start with and set properties from constructor.
- - Within the constructor, we will set the corresponding properties equal to passed in value
- - We also set the PlayerColor to gray within the constructor `PlayerColor = SplashKit.ColorGray();`
+  - Within the constructor, we will set the corresponding properties equal to passed in value
+  - We also set the PlayerColor to gray within the constructor `PlayerColor = SplashKit.ColorGray();`
 
 
 ##### 2.3 Create the rest of the class
@@ -289,7 +289,7 @@ SplashKit.CloseAllConnections(); //Use SplashKit to further make sure we close a
 
 ##### 4.2 Create class constructor
 - The constructor will be passed in a Window parameter, so that it knows where to draw everything
- - Once started, the constructor will ask player's name and store in a temporary string variable for local use to do this we can use following code
+	- Once started, the constructor will ask player's name and store in a temporary string variable for local use to do this we can use following code
 
  ```csharp
 Console.Write("What is your name: "); //Print question on console 
@@ -300,8 +300,8 @@ string name = Console.ReadLine(); //Store input from user to name variable
  - If not, we set `OnlineGame` to true, then ask user which port to run at, the anwser should be converted with `Convert.ToUInt16()` then we store it in `port` ushort variable
  - Next we create the network object and set our network name with `GamePeer peer = new GamePeer(port) { Name = name };` and set `ThisPeer` property equal to `peer` we've created.
  - Next we use same technique to ask user if this is host server or not
-  - If this is host we set `IsServer` to true
-  - If this is not host or server which means it is a client, we set `IsServer` to false and use `MakeNewConnection(peer)` method to connect to server (We will create this method later)
+	- If this is host we set `IsServer` to true
+	- If this is not host or server which means it is a client, we set `IsServer` to false and use `MakeNewConnection(peer)` method to connect to server (We will create this method later)
  - After setup, we create the player with passed in Window parameter and name we got from user input.
  - Then we set the _player property to refer to the player we just created
 
@@ -339,10 +339,10 @@ private void CheckCollisions()
 
 - Next we will create network and otherPlayer related parts
 - `UpdateNetworkInfo()` method will store message we get from other player
- - If it is server it will continuously accept incoming connections by using `SplashKit.AcceptAllNewConnections();`
- - It will always store received message to local property `_otherPlayerMsg = ThisPeer.GetNewMessages();`
- - It will call `UpdateOtherPlayer();` method to update information for otherPlayer 
- - IT will broadcast the current player's status by using `BroadcastMessage();` method
+	- If it is server it will continuously accept incoming connections by using `SplashKit.AcceptAllNewConnections();`
+	- It will always store received message to local property `_otherPlayerMsg = ThisPeer.GetNewMessages();`
+	- It will call `UpdateOtherPlayer();` method to update information for otherPlayer 
+	- IT will broadcast the current player's status by using `BroadcastMessage();` method
 
 
 - `UpdateOtherPlayer()` method will process incoming message if the message length is greater than 0, we split the string into pieces by comma, we use Split method from C#, `name = _otherPlayerMsg.Split(',')[0];`,`x = Convert.ToDouble(_otherPlayerMsg.Split(',')[1]);`, then if the length of name is greater than 0 and not exist in the `_otherNetworkNames` we add the otherPlayer to the otherPlayers list
@@ -378,13 +378,13 @@ ThisPeer.Broadcast($"{_player.Name},{_player.X},{_player.Y},{_player.Radius}");
 ```
 
 - We create `MakeNewConnection()` method which will accept GamePeer as parameter, this method will ask for server ip address and server port to connect to, then connect with `peer.ConnectToGamePeer(address, port);`
- - The address is string type and port is ushort type or Int16 type, we can use `Convert.ToUInt16()` method to convert user's input to ushort then use it in `peer.ConnectToGamePeer(address, port);`
+	- The address is string type and port is ushort type or Int16 type, we can use `Convert.ToUInt16()` method to convert user's input to ushort then use it in `peer.ConnectToGamePeer(address, port);`
 
 
 ### 5. Program.cs
 
 - This class will create
- - a game window e.g. `Window gameWindow = new Window("Big Eat Small", 900, 900);` a window named Big Eat Small with width and height of 900 pixel
- - a game e.g. `Game game = new Game(gameWindow);`
+	- a game window e.g. `Window gameWindow = new Window("Big Eat Small", 900, 900);` a window named Big Eat Small with width and height of 900 pixel
+	- a game e.g. `Game game = new Game(gameWindow);`
 - This class will wrap `SplashKit.ProcessEvents();` and methods in game `HandleInput()`, `Update()`, `Draw()` and window refresh method `gameWindow.Refresh(60);` in a do while loop, if the game did not return Quit as true, it will loop again and again.
- - `HandleInput()` and other methods within Game class can't be call directly we need to refer it so use `game.HandleInput()` for the rest methods resides in Game class, same rule applies
+	- `HandleInput()` and other methods within Game class can't be call directly we need to refer it so use `game.HandleInput()` for the rest methods resides in Game class, same rule applies
