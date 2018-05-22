@@ -387,4 +387,4 @@ ThisPeer.Broadcast($"{_player.Name},{_player.X},{_player.Y},{_player.Radius}");
 	- a game window e.g. `Window gameWindow = new Window("Big Eat Small", 900, 900);` a window named Big Eat Small with width and height of 900 pixel
 	- a game e.g. `Game game = new Game(gameWindow);`
 - This class will wrap `SplashKit.ProcessEvents();` and methods in game `HandleInput()`, `Update()`, `Draw()` and window refresh method `gameWindow.Refresh(60);` in a do while loop, if the game did not return Quit as true, it will loop again and again.
-	- `HandleInput()` and other methods within Game class can't be call directly we need to refer it so use `game.HandleInput()` for the rest methods resides in Game class, same rule applies
+	- `HandleInput()` and other methods within Game class can't be called directly we need to refer it so use `game.HandleInput()` for the rest methods resides in Game class, same rule applies
